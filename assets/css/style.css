@@ -1,0 +1,54 @@
+.jumbotron {
+    box-sizing: border-box;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  
+  .main-button-container {
+    margin-top: 175px;
+    max-width: 610px;
+    margin-left: auto;
+    margin-right: auto;   
+  }
+  
+  .container {
+      background-color: rgb(191, 207, 223);
+      color: black;
+  }
+  .timer-p {
+    margin-top: 40px;
+  }
+  
+  .answer:hover {
+    background: pink;
+  }
+  
+  .answer {
+    padding-top: 7px;
+    height: 45px;
+    color: black;
+    padding-left: 14px;
+    background-color: white;
+    border-radius: 4px;
+  }
+
+  .first-answer {
+    margin-top: 40px;
+  }
+  
+  .reset-button {
+    margin-top: 40px;
+  }
+  
+  .summary-correct {
+    margin-top: 40px;
+  }
+  
+  body {
+    background-image: url("https://d1w9csuen3k837.cloudfront.net/Pictures/1280x720/0/8/1/135081_Index-and-hero---A-picture-is-worth-a-thousand-word.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+  }
