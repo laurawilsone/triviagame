@@ -1,5 +1,20 @@
+
+var startScreen;
+var gameHTML;
+var counter = 30;
+var questionArray = ["What is the name for the longest side of a right triangle?", "What is the most common blood type?", "In our solar system, which planet has the shortest day?", "Which gland in the human body regulates metabolism?", "What common kitchen item is made up of sodium and cholrine atoms?", "In geometry, how many side are on a heptagon?", "Penicillin was discovered in 1928 by which Scottish scientist?", "What is the farthest human-made object from planet Earth?"];
+var answerArray = [["Left Side", "Hypotenuse", "Right Side", "Equalateral"], ["O+","A-","O","B+"], ["Saturn", "Earth", "Mercury", "Jupiter"], ["Thyroid", "Pituitary", "Pineal", "Salivary"], ["Silver", "Salt", "Pepper", "Iron"], ["Seven","Ten","Three","Six"], ["Oprah", "Albert Einstein", "Sir Alexander Fleming", "Steven Hawking"], ["Falcon Heavy", "Orion", "Voyager 1", "Explorer 1"]];
+var correctAnswers = ["B. Hypotenuse", "A. O+", "D. Jupiter", "A. Thyroid", "B. Salt", "A. Seven", "C. Sir Alexander Fleming", "C. Voyager 1"];
+var questionCounter = 0;
+var selecterAnswer;
+var theClock;
+var correctTally = 0;
+var incorrectTally = 0;
+var unansweredTally = 0;
+
+
 $(document).ready(function() {
-// Create a function that creates the start button and initial screen
+    // Create a function that creates the start button and initial screen
 
 function initialScreen() {
 	startScreen = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
@@ -12,7 +27,7 @@ initialScreen();
 
 $("body").on("click", ".start-button", function(event){
 	event.preventDefault();  // added line to test issue on GitHub Viewer
-	clickSound.play();
+
 	generateHTML();
 
 	timerWrapper();
@@ -21,7 +36,7 @@ $("body").on("click", ".start-button", function(event){
 
 $("body").on("click", ".answer", function(event){
 	//answeredQuestion = true;
-	clickSound.play();
+	
 	selectedAnswer = $(this).text();
 	if(selectedAnswer === correctAnswers[questionCounter]) {
 		//alert("correct");
@@ -37,7 +52,7 @@ $("body").on("click", ".answer", function(event){
 }); // Close .answer click
 
 $("body").on("click", ".reset-button", function(event){
-	clickSound.play();
+	
 	resetGame();
 }); // Closes reset-button click
 
@@ -110,16 +125,3 @@ function resetGame() {
 	timerWrapper();
 }
 
-var startScreen;
-var gameHTML;
-var counter = 30;
-var questionArray = ["What is the name for the longest side of a right triangle?", "What is the most common blood type?", "In our solar system, which planet has the shortest day?", "Which gland in the human body regulates metabolism?", "What common kitchen item is made up of sodium and cholrine atoms?", "In geometry, how many side are on a heptagon?", "Penicillin was discovered in 1928 by which Scottish scientist?", "What is the farthest human-made object from planet Earth?"];
-var answerArray = [["Left Side", "Hypotenuse", "Right Side", "Equalateral"], ["O+","A-","O","B+"], ["Saturn", "Earth", "Mercury", "Jupiter"], ["Thyroid", "Pituitary", "Pineal", "Salivary"], ["Silver", "Salt", "Pepper", "Iron"], ["Seven","Ten","Three","Six"], ["Oprah", "Albert Einstein", "Sir Alexander Fleming", "Steven Hawking"], ["Falcon Heavy", "Orion", "Voyager 1", "Explorer 1"]];
-var correctAnswers = ["B. Hypotenuse", "A. O+", "D. Jupiter", "A. Thyroid", "B. Salt", "A. Seven", "C. Sir Alexander Fleming", "C. Voyager 1"];
-var questionCounter = 0;
-var selecterAnswer;
-var theClock;
-var correctTally = 0;
-var incorrectTally = 0;
-var unansweredTally = 0;
-var clickSound = new Audio("sound/button-click.mp3");
