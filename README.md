@@ -11,4 +11,8 @@ Good Luck!
 - HTML5
 - CSS
 - Javascript
-- 
+- Bootstrap
+- jQuery
+
+# Contributers
+Laura Wilson [LinkedIn](www.linkedin.com/in/laura-wilson-03b266148)
