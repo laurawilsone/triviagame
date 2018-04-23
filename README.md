@@ -7,6 +7,8 @@ You have 10 seconds to answer each trivia question. There are 8 questions in tot
 
 Good Luck!
 
+https://laurawilsone.github.io/triviagame/
+
 # Built With
 - HTML5
 - CSS
