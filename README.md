@@ -1,6 +1,6 @@
 # Triviagame
 
-SMU week 5 assignment
+SMU Coding Bootcamp week 5 assignment
 
 # Getting Started
 You have 10 seconds to answer each trivia question. There are 8 questions in total. The game will keep track of the questions you have answered correctly and incorrectly. 
